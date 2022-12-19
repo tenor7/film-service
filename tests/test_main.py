@@ -7,7 +7,7 @@ api = 'http://localhost:8081/film'
 def test_user_empty_get():
     s = requests.Session()
     id = 'c1827b19-0b09-4b62-afbc-c64bf237e70b'
-    response = s.get(f'{api}/find/{id}')
+    response = s.get(f'{}/find/{id}')
     assert response.status_code == 200
 
 def test_user_save_and_get():
