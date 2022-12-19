@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+	testImplementation("com.ninja-squad:springmockk:3.0.1")
 	implementation("io.micrometer:micrometer-registry-prometheus:1.10.2")
 	implementation("org.springframework.boot:spring-boot-starter-actuator:2.7.5")
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
@@ -28,6 +29,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	runtimeOnly("com.h2database:h2")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
