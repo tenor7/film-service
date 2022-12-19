@@ -12,7 +12,7 @@ class FilmController(
 
     ) {
 
-    @PostMapping("/")
+    @PostMapping("/add/")
     fun saveFilm(@RequestParam title: String, @RequestParam authorId: String): Film {
         return filmService.saveFilm(
             Film(
@@ -28,7 +28,7 @@ class FilmController(
         return true
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/find/{id}")
     fun getFilmById(@PathVariable("id") filmId: String): Film? {
         return filmService.getFilm(UUID.fromString(filmId))
     }
